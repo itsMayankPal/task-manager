@@ -36,7 +36,7 @@ editFormDOM.addEventListener('submit', async (e) => {
 
 
   
-  editBtnDOM.textContent = 'Loading...'
+  editBtnDOM.textContent = 'Loading......'
   e.preventDefault()
   try {
     const taskName = taskNameDOM.value

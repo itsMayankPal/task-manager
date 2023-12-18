@@ -1,0 +1,32 @@
+<%- include('partials/header'); -%>
+
+<h1>Home Page </h1>
+
+<ul>
+
+    <% if (user) { %>
+        <li>Welcome, <%= user.email %></li>
+        <li><a href="/logout">Log out</a></li>
+      <% } else { %>
+        <button><a href="/login">Log in</a></button>
+        <button><a href="/register">Sign up</a></button>
+      <% } %>
+   
+  </ul>
+
+
+<div class="container">
+
+    <a href="/"><button>Home page</button></a><br>
+    
+    <a href="/privatepage"><button>authenticated page</button></a><br>
+
+  
+
+
+</div>
+
+
+
+
+<%- include('partials/footer'); -%>

@@ -4,6 +4,7 @@ const Task  = require('../Models/model')
 const getTask = asyncWrap(async(req,res)=>{ 
 
     const task = await Task.find({})
+    console.log(task)
     res.status(200).json({task})
  
 })
@@ -12,6 +13,7 @@ const getTask = asyncWrap(async(req,res)=>{
 const setTask = asyncWrap(async(req, res)=>{
     
         const task = await Task.create(req.body)
+        console.log("seting task ing the data base ", req.body)
         res.status(201).json({task})
 })
 
@@ -46,6 +48,8 @@ const updateTask = asyncWrap(async (req, res)=>{
 const deleteTask = asyncWrap(async (req, res)=>{
 
     const {id:taskId} = req.params
+
+    console.log(taskId)
 
     const task = await Task.findByIdAndDelete(taskId)
 
